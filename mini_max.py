@@ -45,7 +45,7 @@ def mini_max_AI(game_grid, depth, is_maxmizing):
 
 
 def best_move(game_grid):
-    numberDict, locationDict = grid_numbering(game_grid)
+    _, location_dict = grid_numbering(game_grid)
     best_score = -1000
     for i in range(len(game_grid)):
         for j in range(len(game_grid[i])):
@@ -57,4 +57,4 @@ def best_move(game_grid):
                     best_score = score
                     move = (i, j)
 
-    return locationDict[move]
+    return location_dict[move]

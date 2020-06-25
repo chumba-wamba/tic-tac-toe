@@ -30,13 +30,13 @@ def check_winner(game_grid):
     for i in range(len(game_grid)):
         columns.append([game_grid[j][i] for j in range(len(game_grid))])
 
-    diagnol_one, diagnol_two = [], []
+    diagonal_one, diagonal_two = [], []
     for i in range(len(game_grid)):
         for j in range(len(game_grid)):
             if(i == j):
-                diagnol_one.append(game_grid[i][j])
+                diagonal_one.append(game_grid[i][j])
             if(i+j == len(game_grid)-1):
-                diagnol_two.append(game_grid[i][j])
+                diagonal_two.append(game_grid[i][j])
 
     for row in game_grid:
         if(all((x == row[0] and x != ' ') for x in row)):
@@ -54,17 +54,17 @@ def check_winner(game_grid):
             elif(column[0] == '0'):
                 winner = '0'
 
-    if(all((x == diagnol_one[0] and x != ' ') for x in diagnol_one)):
+    if(all((x == diagonal_one[0] and x != ' ') for x in diagonal_one)):
         victory = True
-        if(diagnol_one[0] == 'X'):
+        if(diagonal_one[0] == 'X'):
             winner = 'X'
-        elif(diagnol_one[0] == '0'):
+        elif(diagonal_one[0] == '0'):
             winner = '0'
-    if(all((x == diagnol_two[0] and x != ' ') for x in diagnol_two)):
+    if(all((x == diagonal_two[0] and x != ' ') for x in diagonal_two)):
         victory = True
-        if(diagnol_two[0] == 'X'):
+        if(diagonal_two[0] == 'X'):
             winner = 'X'
-        elif(diagnol_two[0] == '0'):
+        elif(diagonal_two[0] == '0'):
             winner = '0'
 
     counter = 0

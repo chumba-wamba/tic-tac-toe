@@ -6,14 +6,14 @@ import copy
 from numpy import matrix
 
 
-def grid_update(temp_grid, location, X_or_Zero, number_dict, user):
+def grid_update(temp_grid, location, x_or_zero, number_dict, user):
     while(temp_grid[number_dict[location][0]][number_dict[location][1]] != ' '):
         if(user == 1):
             location = int(input("Re-enter the location: "))
         else:
             location = best_move(temp_grid)
-    X, Y = number_dict[location]
-    temp_grid[X][Y] = X_or_Zero
+    x, y = number_dict[location]
+    temp_grid[x][y] = x_or_zero
 
     return temp_grid
 
