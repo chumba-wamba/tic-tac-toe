@@ -1,4 +1,4 @@
-from helper_functions import check_winner, grid_numbering
+from game.helper_functions import check_winner, grid_numbering
 from copy import deepcopy
 from numpy import matrix
 

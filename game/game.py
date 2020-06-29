@@ -1,5 +1,5 @@
-from mini_max import scores, mini_max_AI, best_move
-from helper_functions import grid, grid_numbering, check_winner
+from game.mini_max import scores, mini_max_AI, best_move
+from game.helper_functions import grid, grid_numbering, check_winner
 import random
 import time
 import copy
